@@ -1,4 +1,4 @@
-package com.example.randomjoke
+package com.example.randomjoke.ui.view
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -15,13 +15,15 @@ import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.randomjoke.database.FavoriteJokeDatabase
-import com.example.randomjoke.database.FavoriteJokeRepository
+import com.example.randomjoke.Constants
+import com.example.randomjoke.R
+import com.example.randomjoke.model.database.FavoriteJokeDatabase
+import com.example.randomjoke.model.database.FavoriteJokeRepository
 import com.example.randomjoke.databinding.ActivityMainBinding
-import com.example.randomjoke.datamodel.JokeService
-import com.example.randomjoke.datamodel.JokesDataModel
-import com.example.randomjoke.viewmodel.FavJokeViewModelFactory
-import com.example.randomjoke.viewmodel.FavoriteJokeViewModel
+import com.example.randomjoke.model.datamodel.JokeService
+import com.example.randomjoke.model.datamodel.JokesDataModel
+import com.example.randomjoke.ui.viewmodel.FavJokeViewModelFactory
+import com.example.randomjoke.ui.viewmodel.FavoriteJokeViewModel
 import com.google.gson.Gson
 import retrofit.*
 import kotlin.random.Random
@@ -67,14 +69,15 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.favorites-> {
+            R.id.favorites -> {
                 val intent = Intent(this@MainActivity, FavoriteJokes::class.java)
                 startActivity(intent)
                 return true
-            } R.id.shuffle_joke-> {
+            } R.id.shuffle_joke -> {
                 getRandomJoke()
                 return true
-            }R.id.add_to_favorite-> {
+            }
+            R.id.add_to_favorite -> {
                 bindind.myViewModel?.inputJoke?.value = selectedFavoriteJoke
                 bindind.myViewModel?.save()
                 getRandomJoke()

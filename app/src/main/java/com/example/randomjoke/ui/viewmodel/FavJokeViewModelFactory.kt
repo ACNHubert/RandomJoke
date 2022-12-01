@@ -1,7 +1,7 @@
-package com.example.randomjoke.viewmodel
+package com.example.randomjoke.ui.viewmodel
 
 import androidx.lifecycle.*
-import com.example.randomjoke.database.FavoriteJokeRepository
+import com.example.randomjoke.model.database.FavoriteJokeRepository
 
 class FavJokeViewModelFactory(private val repository: FavoriteJokeRepository):ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

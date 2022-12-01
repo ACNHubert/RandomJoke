@@ -5,7 +5,7 @@
     <data>
         <variable
             name="myViewModel"
-            type="com.example.randomjoke.viewmodel.FavoriteJokeViewModel"
+            type="com.example.randomjoke.ui.viewmodel.FavoriteJokeViewModel"
             />
     </data>
     <LinearLayout
