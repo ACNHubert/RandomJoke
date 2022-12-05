@@ -1,4 +1,4 @@
-package com.example.randomjoke.database
+package com.example.randomjoke.model.database
 
 class FavoriteJokeRepository(private val dao : JokeDAO) {
     val jokes = dao.getAllJoke()

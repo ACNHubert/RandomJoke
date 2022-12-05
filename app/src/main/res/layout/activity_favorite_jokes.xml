@@ -5,7 +5,7 @@
     <data>
         <variable
             name="myViewModel"
-            type="com.example.randomjoke.viewmodel.FavoriteJokeViewModel"
+            type="com.example.randomjoke.ui.viewmodel.FavoriteJokeViewModel"
             />
     </data>
     <LinearLayout
@@ -14,7 +14,7 @@
         android:layout_margin="15dp"
 
         android:orientation="vertical"
-        tools:context=".MainActivity" >
+        tools:context=".ui.view.MainActivity" >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/joke_recyclerView"
