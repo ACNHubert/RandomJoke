@@ -13,42 +13,45 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
+        android:background="@drawable/joke"
         tools:context=".ui.view.MainActivity">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="229dp"
             android:layout_marginStart="@dimen/card_view_marginStartEnd"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="@dimen/card_view_marginStartEnd"
             android:background="@android:color/white"
+            app:cardBackgroundColor="#BE000000"
             app:cardCornerRadius="@dimen/card_view_corner_radius"
             app:cardElevation="@dimen/card_view_elevation">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:padding="@dimen/card_view_content_padding">
+                android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/selected_joke"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/joke_text_size"
-                    android:textStyle="bold"
                     android:padding="10dp"
-                    />
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/joke_text_size"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/punchline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
+
                     android:textSize="@dimen/punchline_text_size"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

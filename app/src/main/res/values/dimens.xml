@@ -9,9 +9,9 @@
     <dimen name="main_screen_content_padding">16dp</dimen>
     <dimen name="card_view_marginStartEnd">5dp</dimen>
     <dimen name="card_view_marginTop">2dp</dimen>
-    <dimen name="card_view_corner_radius">8dp</dimen>
+    <dimen name="card_view_corner_radius">20dp</dimen>
     <dimen name="card_view_elevation">5dp</dimen>
-    <dimen name="card_view_content_padding">10dp</dimen>
+    <dimen name="card_view_content_padding">20dp</dimen>
 
     <dimen name="joke_text_size">30sp</dimen>
     <dimen name="punchline_text_size">16sp</dimen>
