@@ -1,4 +1,4 @@
-package com.example.randomjoke.database
+package com.example.randomjoke.model.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

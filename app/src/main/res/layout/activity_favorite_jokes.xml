@@ -5,20 +5,21 @@
     <data>
         <variable
             name="myViewModel"
-            type="com.example.randomjoke.viewmodel.FavoriteJokeViewModel"
+            type="com.example.randomjoke.ui.viewmodel.FavoriteJokeViewModel"
             />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="15dp"
+
         android:orientation="vertical"
-        tools:context=".MainActivity" >
+        tools:context=".ui.view.MainActivity" >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/joke_recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="487dp"
+            android:layout_height="681dp"
             android:layout_margin="5dp" />
         <LinearLayout
             android:layout_width="match_parent"

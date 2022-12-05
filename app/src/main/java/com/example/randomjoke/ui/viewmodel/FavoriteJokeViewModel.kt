@@ -1,8 +1,8 @@
-package com.example.randomjoke.viewmodel
+package com.example.randomjoke.ui.viewmodel
 
 import androidx.lifecycle.*
-import com.example.randomjoke.database.FavoriteJokeRepository
-import com.example.randomjoke.database.ManageFavoriteJoke
+import com.example.randomjoke.model.database.FavoriteJokeRepository
+import com.example.randomjoke.model.database.ManageFavoriteJoke
 import kotlinx.coroutines.launch
 
 class FavoriteJokeViewModel (private val repository: FavoriteJokeRepository) : ViewModel(){

@@ -1,4 +1,4 @@
-package com.example.randomjoke.datamodel
+package com.example.randomjoke.model.datamodel
 
 import retrofit.Call
 import retrofit.http.GET

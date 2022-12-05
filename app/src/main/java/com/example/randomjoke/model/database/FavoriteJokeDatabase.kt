@@ -1,4 +1,4 @@
-package com.example.randomjoke.database
+package com.example.randomjoke.model.database
 
 import android.content.Context
 import androidx.room.Database
@@ -14,7 +14,7 @@ abstract class FavoriteJokeDatabase : RoomDatabase() {
     companion object{
         @Volatile
         private var instance : FavoriteJokeDatabase? = null
-        fun getInstance(context: Context):FavoriteJokeDatabase{
+        fun getInstance(context: Context): FavoriteJokeDatabase {
             synchronized(this){
                 var instance = instance
                 if(instance==null){
@@ -23,9 +23,9 @@ abstract class FavoriteJokeDatabase : RoomDatabase() {
                         FavoriteJokeDatabase::class.java,
                         "city_data_database"
                     ).build()
-                    this.instance = instance
+                    Companion.instance = instance
                 }
-                this.instance = instance
+                Companion.instance = instance
                 return instance
             }
         }

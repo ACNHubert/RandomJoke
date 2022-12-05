@@ -1,4 +1,4 @@
-package com.example.randomjoke
+package com.example.randomjoke.ui.view
 
 import android.os.Bundle
 import android.util.Log
@@ -10,13 +10,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.randomjoke.adapter.JokeAdapter
-import com.example.randomjoke.database.FavoriteJokeDatabase
-import com.example.randomjoke.database.FavoriteJokeRepository
-import com.example.randomjoke.database.ManageFavoriteJoke
+import com.example.randomjoke.R
+import com.example.randomjoke.ui.adapter.JokeAdapter
+import com.example.randomjoke.model.database.FavoriteJokeDatabase
+import com.example.randomjoke.model.database.FavoriteJokeRepository
+import com.example.randomjoke.model.database.ManageFavoriteJoke
 import com.example.randomjoke.databinding.ActivityFavoriteJokesBinding
-import com.example.randomjoke.viewmodel.FavJokeViewModelFactory
-import com.example.randomjoke.viewmodel.FavoriteJokeViewModel
+import com.example.randomjoke.ui.viewmodel.FavJokeViewModelFactory
+import com.example.randomjoke.ui.viewmodel.FavoriteJokeViewModel
 
 
 class FavoriteJokes : AppCompatActivity() {
@@ -50,7 +51,7 @@ class FavoriteJokes : AppCompatActivity() {
         })
     }
 
-    private fun listItemClicked(manageJokes: com.example.randomjoke.database.ManageFavoriteJoke) {
+    private fun listItemClicked(manageJokes: ManageFavoriteJoke) {
         jokeViewModel.initUpdateAndDelete(manageJokes)
     }
 
@@ -60,7 +61,7 @@ class FavoriteJokes : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.remove_to_favorite-> {
+            R.id.remove_to_favorite -> {
                 binding.myViewModel?.Delete()
                 Toast.makeText(
                     this,

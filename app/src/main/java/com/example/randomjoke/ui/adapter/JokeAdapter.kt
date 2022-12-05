@@ -1,11 +1,11 @@
-package com.example.randomjoke.adapter
+package com.example.randomjoke.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.randomjoke.R
-import com.example.randomjoke.database.ManageFavoriteJoke
+import com.example.randomjoke.model.database.ManageFavoriteJoke
 import com.example.randomjoke.databinding.JokeListItemBinding
 
 
@@ -31,7 +31,7 @@ class JokeAdapter (private val jokelist: List<ManageFavoriteJoke>
 
 class MyViewHolder(val binding: JokeListItemBinding): RecyclerView.ViewHolder(binding.root){
 
-    fun bind(manageJokes: ManageFavoriteJoke,clickListener:(ManageFavoriteJoke)->Unit){
+    fun bind(manageJokes: ManageFavoriteJoke, clickListener:(ManageFavoriteJoke)->Unit){
         binding.nameTextView.text = manageJokes.favoriteJoke
         binding.listItemLayout.setOnClickListener{
             clickListener(manageJokes)
